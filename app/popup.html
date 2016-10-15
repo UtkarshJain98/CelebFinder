@@ -14,6 +14,10 @@
     <script src="scripts/angular.js"></script><!-- load angular -->
     <script src="scripts/app.js"></script>
 
+    <link rel="stylesheet" href="styles/icon.css">
+    <link rel="stylesheet" href="styles/material.indigo-pink.min.css">
+    <script defer src="scripts/material.min.js"></script>
+
     <!-- build:css styles/popup-vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
@@ -23,7 +27,21 @@
     <!-- endbuild -->
   </head>
   <body ng-controller="mainController">
-    <h1>'Allo, 'Allo! {{message}}</h1>
+      <div class="demo-card-square mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title mdl-card--expand">
+            <h2 class="mdl-card__title-text">Tom Cruise</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+
+
+           {{message}}
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              More Info
+            </a>
+          </div>
+        </div>
 
     <!-- build:js scripts/popup-vendor.js -->
     <!-- bower:js -->

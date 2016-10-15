@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+     <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+    <title>Schedulr</title>
+
+    <!-- SCROLLS -->
+
+    <!-- SPELLS -->
+    <script src="scripts/jquery.js"></script><!-- load jquery -->
+    <script src="scripts/angular.js"></script><!-- load angular -->
+    <script src="scripts/app.js"></script>
+
+    <!-- build:css styles/popup-vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css styles/main.css -->
+    <link href="styles/main.css" rel="stylesheet">
+    <!-- endbuild -->
+  </head>
+  <body ng-controller="mainController">
+    <h1>'Allo, 'Allo! {{message}}</h1>
+
+    <!-- build:js scripts/popup-vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/popup.js -->
+    <script src="scripts/popup.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

@@ -1,15 +1,58 @@
+* {
+	-webkit-transition:all .3s ease;
+	-moz-transition:all .3s ease;
+	-ms-transition:all .3s ease;
+	-o-transition:all .3s ease;
+	transition:all .3s ease;
+}
+
 body {
   padding: 20px;
+  width: 320px;
+  height: auto;
 }
 
 .demo-card-square.mdl-card {
   width: 320px;
   height: auto;
 }
+
+.demo-card-image.mdl-card {
+  width: 256px;
+  height: 256px;
+  background: url('../assets/demos/image_card.jpg') center / cover;
+}
+.demo-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .demo-card-square > .mdl-card__title {
   color: #fff;
-  background:
-    url('http://a5.files.biography.com/image/upload/c_fit,cs_srgb,dpr_1.0,h_1200,q_80,w_1200/MTE5NDg0MDU0OTM2NTg1NzQz.jpg');
+  
   background-size: cover;
   height: 320px;
+}
+
+.is-active{
+	width: 320px;
+    height: 320px;
+} 
+
+.errorBox{
+	text-align: center;
+	vertical-align: center;
+
+
+}
+
+.errorBox h3{
+	color:rgba(0,0,0,.87);
+
 }

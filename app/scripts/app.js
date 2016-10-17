@@ -10,12 +10,6 @@
     			.then(function(data, status) {
 						console.log(status);
 							return data;
-
-							//return funcs.getCelebs(mData);
-						    /*.error(function(data, status, headers, config) {
-								console.log(data);	
-							});*/
-
 				}, function(err){
 		            console.error(err);
 		            return err;
@@ -25,19 +19,10 @@
 		            console.error(err);
 		            return err; // This will print any error that was thrown in the previous error handler.
 		        });
-	    			/*.error(function(data, status, headers, config) {
-							console.log(data);	
-						});*/  
+	    		 
 	    }
-
-		
-
-		
-
-
 	    return funcs;
 	});
-
 
 
 	app.controller('mainController', ['$scope','$http','mainFactory','$window', function($scope,$http, mainFactory,$window) {
@@ -65,8 +50,6 @@
 			         $scope.celebrities = arrItems;
 			      	
 			       });
-
-	          
 			    console.log($scope.celebrities);
 
 	        }
@@ -76,33 +59,16 @@
 			 chrome.tabs.create({ url: display });
    			 window.close();
 	    };
-		/*
-		chrome.tabs.query( {
-	      // gets the window the user can currently see
-	      active: true, 
-	      currentWindow: true 
-	    },
-	    function (tabs) {
-	      chrome.tabs.captureVisibleTab( 
-	        chrome.windows.WINDOW_ID_CURRENT,
-	        function (src) {
-	          // displays a link to the image. Can be replaced by an alert() to 
-	          // verify the result is 'undefined'
-	          console.log(src);
-	        }
-	      ); 
-	    }
-	  );*/
+		
 	  var upload = function(image){
 		var body = {"testdot": image};
 		$http.post('http://nisarg.me:3000/testFormData/', body).
 				success(function(data, status) {
 					if (data.success == true) {
 						console.log(data.filename);
-
 						var mData = {'url': 'http://nisarg.me:3000/uploads/'+data.filename};
 						$http.post('https://api.projectoxford.ai/vision/v1.0/analyze?details=Celebrities', mData, {
-					        headers: { 'Content-Type': 'application/json','Ocp-Apim-Subscription-Key': '92c7f770b37a4349ac0bb04120a1672b'},
+					        headers: { 'Content-Type': 'application/json','Ocp-Apim-Subscription-Key': 'YOUR-API-KEY-HERE'},
 					    })
 					    .success(function(data) {
 					        //do stuff with response
@@ -133,8 +99,5 @@
 					console.log(data);	
 				});
 		}
-	}]);
-	
-	
-	
+	}]);	
 })();

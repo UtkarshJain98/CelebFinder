@@ -1,0 +1,19 @@
+{
+  "name": "file_upload",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "4.13.3",
+    "multer": "1.1.0",
+    "fs": "0.0.1-security",
+    "cheerio": "~0.22.0",
+    "request": "~2.75.0",
+    "query-string": "~4.2.3",
+    "suspend": "~0.7.0",
+    "request-promise": "~4.1.1"
+  },
+  "devDependencies": {
+    "should": "~7.1.0",
+    "mocha": "~2.3.3",
+    "supertest": "~1.1.0"
+  }
+}
